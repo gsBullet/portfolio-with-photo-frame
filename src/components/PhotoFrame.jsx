@@ -1,25 +1,38 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import EasyCrop from "./EasyCrop";
 import "react-image-crop/dist/ReactCrop.css";
+import html2canvas from "html2canvas";
 
 const PhotoFrame = () => {
   const [imageUrl, setImageUrl] = useState(null);
   const [openCrop, setOpenCrop] = useState(null);
-//   const [file, setFile] = useState(null);
+  const canvasRef = useRef(null);
 
   async function photoHandler(e) {
     const fileImage = e.target.files[0];
-    
+
     if (fileImage) {
-    //   setFile(fileImage);
       setImageUrl(URL.createObjectURL(fileImage));
       setOpenCrop(true);
     }
   }
 
-
-
+  const handleDownload = () => {
+    const photoFrameContent = document.querySelector(".photo-frame");
   
+    // Use html2canvas to capture the content of the .photo-frame div
+    html2canvas(photoFrameContent).then((canvas) => {
+      // Convert canvas content to a data URL representing a PNG image
+      const url = canvas.toDataURL("image/png");
+  
+      // Create a link element and trigger download
+      const link = document.createElement("a");
+      link.download = "photo_frame.png";
+      link.href = url;
+      link.click();
+      setImageUrl(null)
+    });
+  };
 
   return !openCrop ? (
     <div className="container my-5">
@@ -52,22 +65,6 @@ const PhotoFrame = () => {
                     className="form-control"
                     name="myImage"
                     id="myImage"
-                    placeholder=""
-                    // style={{ display: "none" }}
-                  />
-                </div>
-
-                <div className="mb-3 d-none">
-                  <label htmlFor="" className="form-label">
-                    আপনার নাম লিখুন (বাংলায়)
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    name="name"
-                    id="name"
-                    aria-describedby="helpId"
-                    placeholder="নাম (বাংলায়)"
                   />
                 </div>
               </form>
@@ -79,8 +76,6 @@ const PhotoFrame = () => {
             <div className="card-body shadow h-100">
               <div className="photo-frame">
                 <img className="myPic border-0" src={imageUrl} alt="" />
-                {/* <img className="myPic border-0" src={file} alt="" /> */}
-
                 <img
                   className="phtooFrame w-100"
                   src="./img/Facebook-Frame.png"
@@ -90,7 +85,18 @@ const PhotoFrame = () => {
             </div>
           </div>
           <div className="col-lg-6 col-md-6 col-sm-10 m-auto py-3">
-            <button className="btn w-100">Download</button>
+            <div className="d-flex align-items-center justify-content-center gap-3">
+              <button
+                className="btn btn-success w-100"
+                onClick={() => setOpenCrop(true)}
+              >
+                Edit
+              </button>
+              <canvas ref={canvasRef} style={{ display: "none" }} />
+              <button className="btn w-100" onClick={handleDownload}>
+                Download
+              </button>
+            </div>
           </div>
         </div>
       </div>

@@ -1,43 +1,42 @@
-import {  useState } from "react";
+import { useState } from "react";
 import CropIcon from "@mui/icons-material/Crop";
 import Cropper from "react-easy-crop";
 import { Typography } from "@mui/material";
-import { Button, Box, DialogContent, DialogActions,Slider } from "@mui/material";
+import {
+  Button,
+  Box,
+  DialogContent,
+  DialogActions,
+  Slider,
+} from "@mui/material";
 import { Cancel } from "@mui/icons-material";
 import getCroppedImg from "./CropImage";
 
-const EasyCrop = ({ imageUrl, setOpenCrop,setImageUrl }) => {
+const EasyCrop = ({ imageUrl, setOpenCrop, setImageUrl }) => {
   const [crop, setCrop] = useState({ x: 0, y: 0 });
   const [zoom, setZoom] = useState(1);
   const [rotation, setRotation] = useState(0);
-  const [croppedAreaPixels , setCroppedAreaPixels] = useState(null);
-
+  const [croppedAreaPixels, setCroppedAreaPixels] = useState(null);
 
   function zoomPercent(value) {
     return `${Math.round(value * 100)}`;
   }
-  
-  const cropComplete = (croppedArea, croppedAreaPixels ) => {
+
+  const cropComplete = (croppedArea, croppedAreaPixels) => {
     setCroppedAreaPixels(croppedAreaPixels);
   };
 
-  const showCroppedImage = (async () => {
+  const showCroppedImage = async () => {
     try {
-      const m = await getCroppedImg(
-        imageUrl,
-        croppedAreaPixels,
-        rotation
-      );
-     console.log(m);
+      const url = await getCroppedImg(imageUrl, croppedAreaPixels, rotation);
+      //  console.log(m);
       // setFile(file);
-      setImageUrl(m)
-      setOpenCrop(false)
-
+      setImageUrl(url);
+      setOpenCrop(false);
     } catch (e) {
       console.error(e);
     }
-  })
-
+  };
 
   return (
     <>
@@ -46,7 +45,7 @@ const EasyCrop = ({ imageUrl, setOpenCrop,setImageUrl }) => {
         sx={{
           position: "relative",
           background: "#3333",
-          height:400,
+          height: 400,
           width: "auto",
           minWidth: { sm: 500 },
         }}
@@ -55,7 +54,7 @@ const EasyCrop = ({ imageUrl, setOpenCrop,setImageUrl }) => {
           image={imageUrl}
           crop={crop}
           rotation={rotation}
-          zoom={zoom}     
+          zoom={zoom}
           showGrid={true}
           aspect={1}
           onZoomChange={setZoom}
@@ -86,7 +85,6 @@ const EasyCrop = ({ imageUrl, setOpenCrop,setImageUrl }) => {
               max={360}
               value={rotation}
               onChange={(e, rotation) => setRotation(rotation)}
-              
             />
           </Box>
         </Box>
@@ -113,7 +111,6 @@ const EasyCrop = ({ imageUrl, setOpenCrop,setImageUrl }) => {
           </Button>
         </Box>
       </DialogActions>
-   
     </>
   );
 };
