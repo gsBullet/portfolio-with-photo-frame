@@ -1,0 +1,140 @@
+body {
+  font-family: times !important;
+}
+
+.header_option {
+  background-color: #124b65;
+}
+
+.header_option .nav_bar ul li a {
+  color: white !important;
+  /* border: 1px solid red; */
+}
+.header_option ul li a:hover {
+  color: rgb(28, 233, 28) !important;
+}
+.developer_derails {
+  padding: 120px 0px;
+}
+/* .persona_heading h2 {
+  padding: 100px 0px;
+} */
+.progress_bar_control {
+  margin: 0 auto;
+}
+.speech {
+  /* padding-left: 300px; */
+  padding: 10px 300px;
+}
+.web_hover:hover {
+  /* color: #00004f; */
+  color: red;
+  cursor: pointer;
+}
+.btn {
+  background-color: #00004f;
+  color: white;
+  font-weight: 800;
+}
+.btn:hover {
+  color: white;
+  font-weight: 800;
+  background-color: red;
+}
+input[type="email"] {
+  border: none;
+  text-align: center;
+  width: 100%;
+  border-bottom: 1px solid gray;
+}
+.btn_footer {
+  width: 100%;
+  text-align: center;
+  background-color: red !important;
+  color: aliceblue;
+  font-weight: bold;
+}
+.myPic {
+  position: absolute;
+  overflow: hidden;
+  height: 90%;
+  top: 7%;
+  left: 8%;
+  width: 84%;
+}
+.phtooFrame {
+  position: relative;
+  margin: 0;
+  z-index: 999;
+}
+.frameHeader {
+  background-color: #00004f;
+}
+
+/* .App {
+  background-color: #c4c4c4;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.App-header {
+  padding-top: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: #fff;
+}
+
+label {
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+button {
+  z-index: 2;
+  cursor: pointer;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.cropped-image {
+  height: 600px;
+  width: auto;
+}
+
+.cropped-image-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+._coverImage-holder  {
+  padding: 25px 40px;
+  background-color:black;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.crop-container {
+  height: 600px;
+  width: 600px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  position: absolute;
+  bottom: -15px; */
+/* } */
