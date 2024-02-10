@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from './layouts/Header'
-// import Footer from './layouts/Footer'
+import Footer from './layouts/Footer'
 import { Outlet } from 'react-router-dom'
 
 const FrontentLayouts = () => {
@@ -8,7 +8,7 @@ const FrontentLayouts = () => {
     <>
     <Header/>
     <Outlet/>
-    {/* <Footer/> */}
+    <Footer/>
     </>
   )
 }

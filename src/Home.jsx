@@ -6,24 +6,20 @@ const Home = () => {
   return (
     <>
       <div className="container">
-        {/* <!-- header option start --> */}
-        {/* <Header/> */}
-         {/* <!-- header option end --> */}
-         
         {/* <!-- developer details start  --> */}
         <section>
           <div className="container-fluid bg-light  ">
-            <div className="row border">
-              <div className="col-2"></div>
-              <div className="col-4 ">
+            <div className="row border backgroundImage">
+              <div className="col-lg-2 col-md:d-none col-sm:d-none"></div>
+              <div className="col-lg-4 col-md-4 col-sm-12 ">
                 <div className="developer_derails">
-                  <h5 className="pb-3 text-capitalize">
+                  <h5 className="pb-3 text-capitalize gratingsColor fw-bold">
                     greetings, it's Younus Faravi
                   </h5>
-                  <h1 className="pb-3">
+                  <h1 className="fs-1 fw-bold brandsColor">
                     I'm a BI Consultent, Growth Marketing Analyst
                   </h1>
-                  <p className="text-secondary fs-6">
+                  <p className="text-black fs-6">
                     In today's highly competitive digital landscape, leveraging
                     data science is the key to unlocking unparalleled insights
                     and optimizing your digital marketing strategies. Our
@@ -34,18 +30,18 @@ const Home = () => {
                   </p>
                   <button className="btn btn-danger ">
                     <a className="text-white text-decoration-none" href="#/">
-                      HIRE ME NOW
+                      Meet & Greet
                     </a>
                   </button>
                 </div>
               </div>
-              <div className="col-6">
+              <div className="col-lg-6 col-md-6 col-sm-12:d-none">
                 <div className="developer_img">
-                  <img
+                  {/* <img
                     className="img-fluid ps-5 pt-5"
                     src="./img/behaviour.PNG"
                     alt=""
-                  />
+                  /> */}
                 </div>
               </div>
             </div>
@@ -53,8 +49,8 @@ const Home = () => {
         </section>
         {/* <!-- developer details end  --> */}
 
-        {/* <!-- personal details start  --> */}
 
+        {/* <!-- personal details start  --> */}
         <section>
           <div className="container-fluid pb-5 mb-5">
             <div className="pt-5 pb-3 px-0">
@@ -94,34 +90,39 @@ const Home = () => {
               </h2>
             </div>
             <div className="row justify-content-center aligns-items-center gap-5">
-              <div className="col-6">
+              <div className="col-lg-5 col-lg-4 col-md-12">
                 <div className="personal-details">
-                  <h3>Personal Details:</h3>
                   <p>
-                    In today's highly competitive digital landscape, leveraging
-                    data science is the key to unlocking unparalleled insights
-                    and optimizing your digital marketing strategies. Our
-                    Data-Driven service combines the power of data analysis,
-                    machine learning, and digital marketing expertise to help
-                    businesses maximize their online impact, drive targeted
-                    traffic, and achieve outstanding ROI
+                    I'm a seasoned BI Analyst with a profound passion for
+                    business growth through data-driven strategies. With a
+                    strong foundation in analytical skills I've honed my
+                    expertise to deliver exceptional results.
                   </p>
                   <div className="row pb-3">
-                    <div className="col-6 address_left_part m-0 p-0">
+                    <div className="m-3">
                       <address className="m-0 p-0">
-                        <ul className="fs-6 text">
-                          <li>Name: Md Younus's Services</li>
-                          <li>JOB: freelancer</li>
-                          <li>PHONE: 01568111119</li>
-                        </ul>
-                      </address>
-                    </div>
-                    <div className=" col-6 addressh_right_part m-0 p-0">
-                      <address>
-                        <ul>
-                          <li>BIRTHDAY: 27 Feb 1998</li>
-                          <li>EMAIL: Workspace.younusfaravi@gmail.com</li>
-                          <li>LOCATION: Dhaka, Bangladesh</li>
+                        <ul className="fs-4 text list-unstyled">
+                          <li className="fs-5">
+                            <i
+                              className="fa fa-user fs-4 text-secondary"
+                              aria-hidden="true"
+                            ></i>{" "}
+                            &nbsp;&nbsp; Name: Md Younus's Services
+                          </li>
+                          <li className="fs-5">
+                            <i
+                              className="fa fa-phone fs-4 text-secondary"
+                              aria-hidden="true"
+                            ></i>
+                            &nbsp;&nbsp; PHONE: 01568111119
+                          </li>
+                          <li className="fs-5">
+                            <i
+                              className="fa fa-envelope fs-4 text-secondary"
+                              aria-hidden="true"
+                            ></i>{" "}
+                            &nbsp;&nbsp; EMAIL: younusfaravi@gmail.com
+                          </li>
                         </ul>
                       </address>
                     </div>
@@ -129,45 +130,63 @@ const Home = () => {
                   <ul className="list-group list-group-horizontal list-unstyled">
                     <li className="pe-3">
                       <a
-                        className="border border-danger rounded-circle p-2 text-dark"
-                        href="https://www.facebook.com/"
+                        className="border border-secondary rounded-circle p-2 text-primary"
+                        href=": https://www.facebook.com/biconsultent/
+                        "
                       >
-                        <i class="fa fa-facebook-f" aria-hidden="true"></i>
+                        <i
+                          class="fa-brands fa-facebook-f"
+                          aria-hidden="true"
+                        ></i>
                       </a>
                     </li>
                     <li className="pe-3">
                       <a
-                        className="border border-danger rounded-circle p-2 text-dark"
-                        href="https://twitter.com/"
+                        className="border border-secondary rounded-circle p-2 text-primary"
+                        href=" https://www.youtube.com/@younusfaravi
+                        "
                       >
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <i class="fa-brands fa-youtube" aria-hidden="true"></i>
                       </a>
                     </li>
                     <li className="pe-3">
                       <a
-                        className="border border-danger rounded-circle p-2 text-dark"
-                        href="https://www.instagram.com/"
+                        className="border border-secondary rounded-circle p-2 text-primary"
+                        href=" https://www.instagram.com/younusfaravi/
+                        "
                       >
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <i
+                          class="fa-brands fa-instagram"
+                          aria-hidden="true"
+                        ></i>
                       </a>
                     </li>
-                   
+
                     <li className="pe-3">
                       <a
-                        className="border border-danger rounded-circle p-2 text-dark"
-                        href="https://www.linkedin.com/"
+                        className="border border-secondary rounded-circle p-2 text-primary"
+                        href="https://www.linkedin.com/in/bianalyst/"
                       >
-                       <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                    <li className="pe-3">
+                      <a
+                        className="border border-secondary rounded-circle p-2 text-primary"
+                        href=" https://www.threads.net/@younusfaravi
+                        "
+                      >
+                        <i class="fa-brands fa-square-threads"></i>
                       </a>
                     </li>
                   </ul>
                 </div>
               </div>
-              <div className="col-4 ">
+              <div className="col-lg-5 col-md-6 col-sm-12">
                 <div className="personal_img ">
                   <img
                     className="img-thumbnail "
-                    src="./img/personal.PNG"
+                    src="./img/faravi.jpg"
                     alt="Personal"
                   />
                 </div>
@@ -253,75 +272,82 @@ const Home = () => {
             </div>
             <div className="col-lg-12 col-md-12 col-sm-12">
               <div className="row">
-                <div className="d-flex flex-wrap justify-content-around pb-5">
+                <div className="d-flex flex-wrap justify-content-around gap-3 pb-5">
                   <div className="col-lg-3 card shadow web_design text-center p-3">
                     <div className="web_hover">
-                      <i class="fa fa-tv fs-4 fw-bold" aria-hidden="true"></i>
-                      <h3 className="text-capitalize pt-2">web design</h3>
+                      <i className="fa-solid fa-chart-line fs-4 fw-bold"></i>
+                      <h3 className="text-capitalize pt-2">Data Analytics</h3>
                     </div>
                     <p className="text-secondary text-center">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Voluptas autem ea quo omnis modi eligendi eaque ipsam
-                      accusantium?
+                      DA The process of analysing raw data to find trends and
+                      insight. including extracting data to derive patterns,
+                      relations, and connections
                     </p>
                   </div>
                   <div className="col-lg-3 card shadow web_development text-center p-3">
                     <div className="web_hover">
-                     <i class="fa fa-code  fs-4 fw-bold" aria-hidden="true"></i>
+                      <i
+                        className="fa fa-code  fs-4 fw-bold"
+                        aria-hidden="true"
+                      ></i>
                       <h3 className="text-capitalize pt-2">web development</h3>
                     </div>
                     <p className="text-secondary text-center">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Voluptas autem ea quo omnis modi eligendi eaque ipsam
-                      accusantium?
+                      Web development is the work involved in developing a
+                      website for the Internet or an intranet.
                     </p>
                   </div>
                   <div className="col-lg-3 card shadow graphics_design text-center p-3">
                     <div className="web_hover">
-                    <i class="fa fa-gear fs-4 fw-bold"></i>
-                      <h3 className="text-capitalize pt-2">graphics design</h3>
+                      <i className="fa-solid fa-chart-pie fs-4 fw-bold"></i>
+                      <h3 className="text-capitalize pt-2">
+                        Predictive Visualisation
+                      </h3>
                     </div>
                     <p className="text-secondary text-center">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Voluptas autem ea quo omnis modi eligendi eaque ipsam
-                      accusantium?
+                      DV the process of creating visual representations of data.
+                      It can use static, dynamic, or interactive visual trends.
                     </p>
                   </div>
                 </div>
                 <div className="d-flex flex-wrap justify-content-around pt-5">
                   <div className="col-lg-3 card shadow photography text-center p-3">
                     <div className="web_hover">
-                      <i class="fa fa-camera  fs-4 fw-bold" aria-hidden="true"></i>
-                      <h3 className="text-capitalize pt-2">photography</h3>
+                      <i
+                        className="fa fa-dashboard fs-4 fw-bold"
+                        aria-hidden="true"
+                      ></i>
+                      <h3 className="text-capitalize pt-2">BI Dashboard</h3>
                     </div>
                     <p className="text-secondary text-center">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Voluptas autem ea quo omnis modi eligendi eaque ipsam
-                      accusantium?.
+                      - BI dashboard is a business intelligence tool which
+                      allows users to track, analyse and report on key
+                      performance indicators and other metrics
                     </p>
                   </div>
                   <div className="col-lg-3 card shadow online_support text-center p-3">
                     <div className="web_hover">
-                     <i class="fa fa-handshake-o  fs-4 fw-bold" aria-hidden="true"></i>
-                      <h3 className="text-capitalize pt-2">online support</h3>
+                      <i
+                        className="fa-brands fa-android fs-4 fw-bold"
+                        aria-hidden="true"
+                      ></i>
+                      <h3 className="text-capitalize pt-2">Apps Development</h3>
                     </div>
                     <p className="text-secondary text-center">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Voluptas autem ea quo omnis modi eligendi eaque ipsam
-                      accusantium?
+                      Android software development is the process by which
+                      applications are created for devices running the Android
+                      operating system.
                     </p>
                   </div>
                   <div className="col-lg-3 card shadow android_development text-center p-3">
                     <div className="web_hover">
-                      <i class="fa fa-android fs-4 fw-bold" aria-hidden="true"></i>
-                      <h3 className="text-capitalize pt-2">
-                        android development
-                      </h3>
+                      <i className="fa-solid fa-magnifying-glass-chart fs-4 fw-bold"></i>
+                      <h3 className="text-capitalize pt-2">Growth Marketing</h3>
                     </div>
                     <p className="text-secondary text-center">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Voluptas autem ea quo omnis modi eligendi eaque ipsam
-                      accusantium?
+                      DM the promotion of brands to connect with potential
+                      customers using the internet and other forms of digital
+                      communication.
                     </p>
                   </div>
                 </div>
@@ -335,7 +361,7 @@ const Home = () => {
         {/* <!-- what is next part start  --> */}
         <section>
           <div className="container">
-            <div className="col-12 pb-5 mb-3">
+            <div className="col-lg-12 col-md-12 col-sm-12 pb-5 mb-3">
               <h2 className="text-center text-uppercase">what next</h2>
               <div className="col-2 progress_bar_control">
                 <div className="progress text-center" style={{ height: 3 }}>
@@ -407,10 +433,6 @@ const Home = () => {
         </section>
 
         {/* <!-- what is next part end  --> */}
-
-        {/* <!-- footer option start  --> */}
-        {/* <Footer/> */}
-        {/* <!-- footer option end  --> */}
       </div>
     </>
   );
